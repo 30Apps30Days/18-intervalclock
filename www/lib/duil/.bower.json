@@ -1,0 +1,45 @@
+{
+  "name": "duil",
+  "description": "Tiny data-driven ui rendering framework.",
+  "keywords": [
+    "ui",
+    "data",
+    "loop"
+  ],
+  "authors": [
+    "metaist <metaist@metaist.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/metaist/duil.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/metaist/duil.js.git"
+  },
+  "moduleType": [
+    "amd"
+  ],
+  "main": "dist/duil.js",
+  "ignore": [
+    "**/.*",
+    "Gulpfile.js",
+    "package.json",
+    "src",
+    "lib",
+    "test"
+  ],
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "jquery": "^2.2.4"
+  },
+  "version": "0.1.3",
+  "_release": "0.1.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.3",
+    "commit": "a74f906ecb82baede59a2f83275ef69278ecddc2"
+  },
+  "_source": "https://github.com/metaist/duil.js.git",
+  "_target": "^0.1.3",
+  "_originalSource": "duil",
+  "_direct": true
+}

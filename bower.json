@@ -17,6 +17,8 @@
     "tests"
   ],
   "dependencies": {
-    "material-design-lite": "^1.3.0"
+    "material-design-lite": "^1.3.0",
+    "moment": "^2.18.1",
+    "duil": "^0.1.3"
   }
 }

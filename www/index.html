@@ -21,11 +21,31 @@
     <link rel="stylesheet" href="app/index.css" />
   </head>
   <body>
-    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div id="app" class="is-paused mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Interval Clock</span>
 
         <form id="options" action="#">
+          <p>Beep at preset intervals.</p>
+
+          <div class="mdl-textfield mdl-js-textfield
+            mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="int-1"
+              value="0:05:00" />
+            <label class="mdl-textfield__label" for="int-1">
+              Interval #1
+            </label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield
+            mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="int-2"
+              value="0:01:00" />
+            <label class="mdl-textfield__label" for="int-2">
+              Interval #2
+            </label>
+          </div>
+
         </form>
 
         <footer>
@@ -36,16 +56,56 @@
             </a>
           </nav>
 
-          Idea by PLACEHOLDER<br />
+          Idea by Ellen Zagorsky-Goldberg.<br />
+          Ding by
+          <a href="https://freesound.org/people/Aiwha/sounds/196106/">Aiwha</a>.
+          <br />
           App by <a href="http://metaist.com">Metaist LLC</a>
         </footer>
 
       </div>
       <main class="mdl-layout__content page-content">
+        <ul id="track">
+          <li class="stop stop-1"></li>
+          <li class="stop stop-2"></li>
+          <li id="ball"></li>
+        </ul>
+
+        <div id="laps" class="center-center"></div>
+        <div id="time" class="center-center">0:00:00</div>
+        <div id="buttons" class="center-center">
+          <button id="btn-play"
+            class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary mdl-js-ripple-effect">
+            <i class="material-icons">play_arrow</i>
+            Play
+          </button>
+
+          <button id="btn-pause"
+            class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary mdl-js-ripple-effect">
+            <i class="material-icons">pause</i>
+            Pause
+          </button>
+
+          <button id="btn-reset"
+            class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+            <i class="material-icons">autorenew</i>
+            Reset
+          </button>
+          <br />
+          <div id="debug"></div>
+        </div>
+
+        <audio>
+          <source src="lib/freesound/aiwha-ding.mp3" type="audio/mp3" />
+        </audio>
       </main>
     </div>
 
     <script src="cordova.js"></script>
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/duil/dist/duil.min.js"></script>
     <script src="app/index.js"></script>
   </body>
 </html>
